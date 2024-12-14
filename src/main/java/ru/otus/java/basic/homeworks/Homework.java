@@ -10,11 +10,11 @@ public class Homework {
         int task = 0;
         while (true) {
             if (newScanner.hasNextInt()) {
-                task = newScanner.nextInt(); // Считываем число
-                break; // Выходим из цикла, если ввод корректный
+                task = newScanner.nextInt();
+                break;
             } else {
                 System.out.println("Ошибка: вы ввели не число! Попробуйте снова.");
-                newScanner.next(); // Считываем некорректный ввод, чтобы очистить поток
+                newScanner.next();
                 System.out.println("Пожалуйста, выберите номер задания:");
             }
         }
