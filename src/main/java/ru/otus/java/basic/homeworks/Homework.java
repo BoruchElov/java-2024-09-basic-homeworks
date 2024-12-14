@@ -4,12 +4,22 @@ import java.util.Scanner;
 
 public class Homework {
     public static void main(String[] args) {
-        //Получение номера задания от пользователя
-        Scanner newScanner = new Scanner(System.in);
         System.out.println("Приветствую!\nПожалуйста, выберите номер задания:");
-        int task = newScanner.nextInt();
+        //Получение номера задания от пользователя и обработка исключений при вводе не целочисленных данных
+        Scanner newScanner = new Scanner(System.in);
+        int task = 0;
+        while (true) {
+            if (newScanner.hasNextInt()) {
+                task = newScanner.nextInt(); // Считываем число
+                break; // Выходим из цикла, если ввод корректный
+            } else {
+                System.out.println("Ошибка: вы ввели не число! Попробуйте снова.");
+                newScanner.next(); // Считываем некорректный ввод, чтобы очистить поток
+                System.out.println("Пожалуйста, выберите номер задания:");
+            }
+        }
         //Обработка исключений в случае ввода некорректного номера.
-        while (task < 1 || task > 5) {
+        while (task < 1 || task > 5 ) {
             System.out.println("Ошибка! Вы ввели некорректный номер задания. Повторите попытку.\n-------------");
             task = newScanner.nextInt();
         }
