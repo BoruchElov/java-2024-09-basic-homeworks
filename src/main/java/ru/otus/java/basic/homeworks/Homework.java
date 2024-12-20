@@ -7,7 +7,7 @@ public class Homework {
         System.out.println("Приветствую!\nПожалуйста, выберите номер задания:");
         //Получение номера задания от пользователя и обработка исключений при вводе не целочисленных данных
         Scanner newScanner = new Scanner(System.in);
-        int task = 0;
+        int task;
         while (true) {
             if (newScanner.hasNextInt()) {
                 task = newScanner.nextInt();
@@ -33,7 +33,7 @@ public class Homework {
             System.out.println("Вы выбрали задание 3.");
         } else if (task == 4) {
             System.out.println("Вы выбрали задание 4.");
-        } else if (task == 5) {
+        } else {
             System.out.println("Вы выбрали задание 5.");
         }
         boolean isInputDataRandom = false;
@@ -119,7 +119,7 @@ public class Homework {
                     System.out.println("Ошибка! Вы ввели ответ в некорректном формате. Повторите попытку.\n-------------");
                     answer = newScanner.nextLine();
                 }
-                boolean increment = false;
+                boolean increment;
                 if (answer.equals("Да")) {
                     System.out.println("Дельта будет прибавляться.");
                     increment = true;
@@ -140,19 +140,12 @@ public class Homework {
 
     //Метод для задания случайных значений от пользователя
     public static int[] setRandomData(int numberOfTask) {
-        int[] outputData = new int[2];
-        switch (numberOfTask) {
-            case 2:
-                outputData = new int[3];
-                break;
-            case 3:
-                outputData = new int[1];
-                break;
-            case 4:
-            case 5:
-                outputData = new int[2];
-                break;
-        }
+        int[] outputData;
+        outputData = switch (numberOfTask) {
+            case 2 -> new int[3];
+            case 3 -> new int[1];
+            default -> new int[2];
+        };
         for (int i = 0; i < outputData.length; i++) {
             outputData[i] = generateInt(-100, 100);
         }
@@ -178,7 +171,7 @@ public class Homework {
     public static void selectColor(int data) {
         if (data <= 10) {
             System.out.println("Красный");
-        } else if (data > 10 & data <= 20) {
+        } else if (data <= 20) {
             System.out.println("Жёлтый");
         } else {
             System.out.println("Зелёный");
