@@ -9,7 +9,6 @@ public class Box {
     private int depth;
     private String color;
     private boolean isOpened;
-    private boolean isEmpty;
     String stuffInTheBox;
 
     public enum Colors {
@@ -75,8 +74,7 @@ public class Box {
         }
 
         this.isOpened = isOpened;
-        this.isEmpty = true;
-        this.stuffInTheBox = "ничего";
+        this.stuffInTheBox = null;
     }
 
     /**
@@ -131,9 +129,8 @@ public class Box {
      */
     public void putInTheBox(String stuff) {
         if (isOpened) {
-            if (isEmpty) {
+            if (this.stuffInTheBox == null) {
                 this.stuffInTheBox = stuff;
-                isEmpty = false;
                 System.out.println("В коробку положили " + stuff + ".");
             } else {
                 System.out.println("Невозможно положить " + stuff + " в коробку - в ней уже лежит "
@@ -149,8 +146,7 @@ public class Box {
      */
     public void drawTheBox() {
         if (isOpened) {
-            this.stuffInTheBox = "ничего";
-            isEmpty = true;
+            this.stuffInTheBox = null;
             System.out.println("В коробке больше ничего не лежит.");
         } else {
             System.out.println("Невозможно опустошить коробку - она закрыта.");
@@ -168,7 +164,7 @@ public class Box {
         } else {
             System.out.println("Коробка закрыта.");
         }
-        if (isEmpty) {
+        if (this.stuffInTheBox == null) {
             System.out.println("В коробке ничего не лежит");
         } else {
             System.out.println("В коробке лежит " + stuffInTheBox + ".");
