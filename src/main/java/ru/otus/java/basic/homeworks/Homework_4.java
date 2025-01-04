@@ -25,33 +25,33 @@ public class Homework_4 {
             }
         }
         Box newBox = new Box(Box.Colors.Brown, Box.Sizes.Medium, true);
-        newBox.printBoxInfo();
+        newBox.printInfo();
         System.out.println("-------------");
-        newBox.closeTheBox();
+        newBox.close();
         System.out.println("-------------");
-        newBox.putInTheBox("коньки");
+        newBox.putInside("коньки");
         System.out.println("-------------");
-        newBox.openTheBox();
+        newBox.open();
         System.out.println("-------------");
-        newBox.putInTheBox("коньки");
+        newBox.putInside("коньки");
         System.out.println("-------------");
         newBox.setColor(Box.Colors.Blue);
         System.out.println("-------------");
-        newBox.printBoxInfo();
+        newBox.printInfo();
         System.out.println("-------------");
-        newBox.closeTheBox();
+        newBox.close();
         System.out.println("-------------");
-        newBox.printBoxInfo();
+        newBox.printInfo();
         System.out.println("-------------");
-        newBox.drawTheBox();
+        newBox.draw();
         System.out.println("-------------");
-        newBox.printBoxInfo();
+        newBox.printInfo();
         System.out.println("-------------");
-        newBox.openTheBox();
+        newBox.open();
         System.out.println("-------------");
-        newBox.drawTheBox();
+        newBox.draw();
         System.out.println("-------------");
-        newBox.printBoxInfo();
+        newBox.printInfo();
     }
 
     /**

@@ -1,7 +1,5 @@
 package ru.otus.java.basic.homeworks.utilities;
 
-import java.awt.*;
-
 public class Box {
 
     private int width;
@@ -109,7 +107,7 @@ public class Box {
     /**
      * Метод для открытия коробки.
      */
-    public void openTheBox() {
+    public void open() {
         this.isOpened = true;
         System.out.println("Коробка открыта.");
     }
@@ -117,7 +115,7 @@ public class Box {
     /**
      * Метод для закрытия коробки.
      */
-    public void closeTheBox() {
+    public void close() {
         this.isOpened = false;
         System.out.println("Коробка закрыта.");
     }
@@ -127,7 +125,7 @@ public class Box {
      *
      * @param stuff предмет, который кладётся в коробку
      */
-    public void putInTheBox(String stuff) {
+    public void putInside(String stuff) {
         if (isOpened) {
             if (this.stuffInTheBox == null) {
                 this.stuffInTheBox = stuff;
@@ -144,7 +142,7 @@ public class Box {
     /**
      * Метод, позволяющий опустошить коробку.
      */
-    public void drawTheBox() {
+    public void draw() {
         if (isOpened) {
             this.stuffInTheBox = null;
             System.out.println("В коробке больше ничего не лежит.");
@@ -156,7 +154,7 @@ public class Box {
     /**
      * Метод для печати информации о коробке.
      */
-    public void printBoxInfo() {
+    public void printInfo() {
         System.out.println("Размеры коробки: " + depth + "x" + width + "x" + height + ".");
         System.out.println("Цвет коробки: " + color + ".");
         if (isOpened) {
