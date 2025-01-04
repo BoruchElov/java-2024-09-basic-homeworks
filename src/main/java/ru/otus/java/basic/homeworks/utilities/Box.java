@@ -50,29 +50,29 @@ public class Box {
 
         switch (size) {
             case Large:
-                this.width = 35;
-                this.height = 30;
-                this.depth = 60;
+                width = 35;
+                height = 30;
+                depth = 60;
                 break;
             case Medium:
-                this.width = 25;
-                this.height = 38;
-                this.depth = 31;
+                width = 25;
+                height = 38;
+                depth = 31;
                 break;
             case Small:
-                this.width = 25;
-                this.height = 15;
-                this.depth = 33;
+                width = 25;
+                height = 15;
+                depth = 33;
                 break;
             default:
-                this.width = 25;
-                this.height = 38;
-                this.depth = 31;
+                width = 25;
+                height = 38;
+                depth = 31;
                 break;
         }
 
         this.isOpened = isOpened;
-        this.stuffInTheBox = null;
+        stuffInTheBox = null;
     }
 
     /**
@@ -108,7 +108,7 @@ public class Box {
      * Метод для открытия коробки.
      */
     public void open() {
-        this.isOpened = true;
+        isOpened = true;
         System.out.println("Коробка открыта.");
     }
 
@@ -116,7 +116,7 @@ public class Box {
      * Метод для закрытия коробки.
      */
     public void close() {
-        this.isOpened = false;
+        isOpened = false;
         System.out.println("Коробка закрыта.");
     }
 
@@ -127,8 +127,8 @@ public class Box {
      */
     public void putInside(String stuff) {
         if (isOpened) {
-            if (this.stuffInTheBox == null) {
-                this.stuffInTheBox = stuff;
+            if (stuffInTheBox == null) {
+                stuffInTheBox = stuff;
                 System.out.println("В коробку положили " + stuff + ".");
             } else {
                 System.out.println("Невозможно положить " + stuff + " в коробку - в ней уже лежит "
@@ -144,7 +144,7 @@ public class Box {
      */
     public void draw() {
         if (isOpened) {
-            this.stuffInTheBox = null;
+            stuffInTheBox = null;
             System.out.println("В коробке больше ничего не лежит.");
         } else {
             System.out.println("Невозможно опустошить коробку - она закрыта.");
