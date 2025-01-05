@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks;
 
 import java.util.Arrays;
 
-public class Homework_2 {
+public class Homework2 {
     /*
     Описание задания:
     1) Реализуйте метод, принимающий в качестве аргументов целое число и строку, и печатающий в консоль строку

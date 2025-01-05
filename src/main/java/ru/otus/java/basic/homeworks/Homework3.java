@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks;
 
 import java.util.Arrays;
 
-public class Homework_3 {
+public class Homework3 {
 
     public static void main(String[] args) {
         int[][] dataArray = generate2DArray(-10,10,3,3);

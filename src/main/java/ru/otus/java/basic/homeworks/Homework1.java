@@ -2,7 +2,7 @@ package ru.otus.java.basic.homeworks;
 
 import java.util.Scanner;
 
-public class Homework_1 {
+public class Homework1 {
     public static void main(String[] args) {
         System.out.println("Приветствую!\nПожалуйста, выберите номер задания:");
         //Получение номера задания от пользователя и обработка исключений при вводе не целочисленных данных
